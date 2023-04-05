@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    color: #e0e1dd;
+    background: url(assets/images/pexels-alberlan-barros-16018144.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #1b263bbf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    color: #e0e1dd;
+    pointer-events: none;
+    text-decoration: none;
+    text-shadow: rgba(10, 14, 21, 0.886);
+}
+
+.logo img {
+    width: 20px;
+    height: 20px;
+}
+
+span {
+    color: #52b788;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e0e1dd;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #52b788;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    padding: 60px 10% 0;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 700px;
+    padding-left: 40px;
+    text-shadow: 2px 2px 5px rgba(14, 11, 11, 0.941);
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: bolder;
+    line-height: 1.1;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.home-content p {
+    margin: 10px 0 30px;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 44px;
+    border-radius: 50px;
+    background: #52b788;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #e0e1dd;
+    text-shadow: 0px 0px 0px;
+    box-shadow: 0px 1px 5px rgba(14, 11, 11, 0.941);
+}
+
+.home-sci a {
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70%;
+    background: #52b788;
+    font-size: 30px;
+    color: #e0e1dd;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.home-sci a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #211b1b;
+    border-radius: 70%;
+    transform: scale(.88);
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.home-sci a:hover::after {
+    transform: scale(0);
+}
+
+.home-img {
+    width: 410px;
+    height: 410px;
+}
+
+.home-img .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #52b788;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .circle::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: #211b1b;
+    border-radius: 50%;
+}
+
+.circle .image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 380px;
+    object-fit: cover;
+}
